@@ -38,9 +38,9 @@ public class I18nMojo extends AbstractMojo {
 	@Parameter(property = "outputDirectory", defaultValue = "webroot")
 	private String outputDirectory;
 
-	private List<File> pathList = new ArrayList<File>();
+	private List<File> pathList = new ArrayList<>();
 
-	private List<File> cpPathList = new ArrayList<File>();
+	private List<File> cpPathList = new ArrayList<>();
 
 	@Parameter(property = "propDirectory", defaultValue = "i18n")
 	private String propDirectory;
@@ -48,9 +48,9 @@ public class I18nMojo extends AbstractMojo {
 	@Parameter(property = "propSuffixes", defaultValue = ".properties")
 	private String propSuffixes;
 
-	private List<File> propPathList = new ArrayList<File>();
+	private List<File> propPathList = new ArrayList<>();
 
-	private Map<String, Map<String, String>> propMap = new HashMap<String, Map<String, String>>();
+	private Map<String, Map<String, String>> propMap = new HashMap<>();
 
 	@Parameter(property = "firstSign", defaultValue = "${")
 	private String firstSign;
@@ -61,14 +61,19 @@ public class I18nMojo extends AbstractMojo {
 	public void execute() throws MojoExecutionException, MojoFailureException {
 		try {
 			getLog().info("Start execute i18n.");
+			getLog().debug("Property directory is '" + propDirectory + "'.");
 			FileUtil.readFilePath(propDirectory + File.separator, propSuffixes, propPathList);
+			if (propPathList == null || propPathList.isEmpty()) {
+				getLog().warn("Can't read i18n property files.");
+				return;
+			}
 			for (File file : propPathList)
 				propMap.put(file.getName().split(propSuffixes)[0], FileUtil.readPropFile(file, encoding));
 			List<String> keyList = getKeyList(propMap);
 			for (String key : keyList) {
 				File outputDir = new File(outputDirectory + File.separator + key);
 				if (outputDir.exists()) {
-					getLog().warn("Deleting old i18n directory '" + outputDir + "'.");
+					getLog().debug("Deleting old i18n directory '" + outputDir + "'.");
 					FileUtil.deleteDir(outputDir);
 				}
 			}
@@ -98,12 +103,11 @@ public class I18nMojo extends AbstractMojo {
 			}
 		} catch (Exception e) {
 			getLog().error(e.getMessage());
-			e.printStackTrace();
 		}
 	}
 
 	private List<String> getKeyList(Map<String, ?> propMap) {
-		List<String> keyList = new ArrayList<String>();
+		List<String> keyList = new ArrayList<>();
 		Iterator<?> i = propMap.entrySet().iterator();
 		while (i.hasNext()) {
 			@SuppressWarnings("unchecked")
