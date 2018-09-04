@@ -1,4 +1,4 @@
-[![](https://jitpack.io/v/venwyhk/i18n-maven-plugin.svg)](https://jitpack.io/#venwyhk/i18n-maven-plugin)
+[![](https://jitpack.io/v/venwyhk/i18n-maven-plugin.svg)](https://jitpack.io/#venwyhk/i18n-maven-plugin)&nbsp;&nbsp;[![Codacy Badge](https://api.codacy.com/project/badge/Grade/241c4bc9db5a4fe1acbc3d1d4703de95)](https://www.codacy.com/app/larry7696/i18n-maven-plugin?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=venwyhk/i18n-maven-plugin&amp;utm_campaign=Badge_Grade)
 
 # i18n-maven-plugin #
 
