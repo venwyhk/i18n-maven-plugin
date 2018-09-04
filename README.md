@@ -54,4 +54,4 @@ pom.xml
 
 ***
 
-[![](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)&nbsp;&nbsp;[![](https://maven.apache.org/images/logos/maven-feather.png)](https://maven.apache.org/)
+[![](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)&nbsp;&nbsp;[![](https://www.gnu.org/graphics/lgplv3-88x31.png)](https://www.gnu.org/licenses/lgpl-3.0.en.html)&nbsp;&nbsp;[![](https://maven.apache.org/images/logos/maven-feather.png)](https://maven.apache.org/)
