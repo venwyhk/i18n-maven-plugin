@@ -54,6 +54,4 @@ pom.xml
 
 ***
 
-*larry7696@gmail.com*&nbsp;&nbsp;[![](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)
-
-[![](https://maven.apache.org/images/logos/maven-feather.png)](https://maven.apache.org/)
+[![](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)&nbsp;&nbsp;[![](https://maven.apache.org/images/logos/maven-feather.png)](https://maven.apache.org/)
