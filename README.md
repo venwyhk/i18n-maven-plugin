@@ -2,8 +2,6 @@
 
 # i18n-maven-plugin #
 
-***
-
 ##### Maven #####
 
 pom.xml
