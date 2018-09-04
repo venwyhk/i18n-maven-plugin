@@ -1,7 +1,7 @@
 ...
 <!-- 静态文件国际化工具插件 -->
 <plugin>
-  <groupId>org.sulei.maven.plugins</groupId>
+  <groupId>com.github.venwyhk</groupId>
   <artifactId>i18n-maven-plugin</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <!-- <configuration> -->
