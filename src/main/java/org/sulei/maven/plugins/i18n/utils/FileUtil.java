@@ -22,14 +22,13 @@ import java.util.Map;
 public class FileUtil {
 
 	public static void readFilePath(String path, String suffixes, List<File> pathList) throws Exception {
-		List<String> suffixList = new ArrayList<String>();
+		List<String> suffixList = new ArrayList<>();
 		if (suffixes != null)
 			for (String suffix : suffixes.trim().split("[,]"))
 				suffixList.add(suffix);
 		File file = new File(path);
-		if (!file.exists()) {
-			throw new Exception("Directory '" + path + "' is not exists !");
-		}
+		if (!file.exists())
+			return;
 		File[] tempList = file.listFiles();
 		for (int i = 0; i < tempList.length; i++) {
 			if (tempList[i].isFile())
@@ -49,7 +48,7 @@ public class FileUtil {
 	}
 
 	public static Map<String, String> readPropFile(File file, String encoding) throws Exception {
-		Map<String, String> map = new HashMap<String, String>();
+		Map<String, String> map = new HashMap<>();
 		try (FileInputStream fis = new FileInputStream(file);
 				InputStreamReader isr = new InputStreamReader(fis, encoding);
 				BufferedReader br = new BufferedReader(isr)) {
@@ -64,9 +63,8 @@ public class FileUtil {
 	}
 
 	public static void copyFile(File f1, File f2) throws Exception {
-		if (!f2.getParentFile().exists())
-			if (!f2.getParentFile().mkdirs())
-				throw new Exception("Create file '" + f2.getName() + "' directory error !");
+		if (!f2.getParentFile().exists() && !f2.getParentFile().mkdirs())
+			throw new Exception("Create file '" + f2.getName() + "' directory error !");
 		try (FileInputStream in = new FileInputStream(f1); FileOutputStream out = new FileOutputStream(f2)) {
 			int length = 2097152;
 			byte[] buffer = new byte[length];
