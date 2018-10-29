@@ -34,11 +34,9 @@ public class FileUtil {
 			if (tempList[i].isFile())
 				if (suffixList.size() > 0)
 					for (String suffix : suffixList) {
-						String filePath = tempList[i] + "";
-						if (filePath.endsWith(suffix))
-							pathList.add(tempList[i]);
-						else
+						if (!(tempList[i] + "").endsWith(suffix))
 							continue;
+						pathList.add(tempList[i]);
 					}
 				else
 					pathList.add(tempList[i]);
@@ -57,7 +55,7 @@ public class FileUtil {
 				if (s != null && s.indexOf("=") > 0 && s.split("=").length == 2)
 					map.put(s.split("=")[0], s.split("=")[1]);
 		} catch (Exception e) {
-			throw new Exception(e.getMessage());
+			throw e;
 		}
 		return map;
 	}
@@ -91,14 +89,13 @@ public class FileUtil {
 				BufferedWriter bw = new BufferedWriter(osw)) {
 			String str = null;
 			StringBuffer sb = new StringBuffer("");
-			while ((str = br.readLine()) != null) {
+			while ((str = br.readLine()) != null)
 				sb.append(str + "\r\n");
-			}
 			bw.write(sb.toString().replace(oldStr, newStr));
 		} catch (FileNotFoundException e) {
-			throw new Exception(e.getMessage());
+			throw e;
 		} catch (IOException e) {
-			throw new Exception(e.getMessage());
+			throw e;
 		}
 	}
 
