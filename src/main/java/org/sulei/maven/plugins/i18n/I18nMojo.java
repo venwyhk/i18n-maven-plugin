@@ -52,10 +52,10 @@ public class I18nMojo extends AbstractMojo {
 
 	private Map<String, Map<String, String>> propMap = new HashMap<>();
 
-	@Parameter(property = "firstSign", defaultValue = "${")
+	@Parameter(property = "firstSign", defaultValue = "@{")
 	private String firstSign;
 
-	@Parameter(property = "finalSign", defaultValue = "}")
+	@Parameter(property = "finalSign", defaultValue = "}@")
 	private String finalSign;
 
 	public void execute() throws MojoExecutionException, MojoFailureException {
