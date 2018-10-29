@@ -10,7 +10,7 @@
     <licenses>
         <license>
             <name>GNU General Public License</name>
-            <url>http://www.gnu.org/licenses/lgpl-3.0.en.html</url>
+            <url>https://www.gnu.org/licenses/lgpl-3.0.en.html</url>
         </license>
     </licenses>
     <developers>
@@ -18,6 +18,9 @@
             <id>venwyhk</id>
             <name>Larry</name>
             <email>larry7696@gmail.com</email>
+            <roles> 
+                <role>Developer</role> 
+            </roles>
         </developer>
     </developers>
     <properties>
