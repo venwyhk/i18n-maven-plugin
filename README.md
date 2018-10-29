@@ -19,7 +19,7 @@ pom.xml
     <plugin>
         <groupId>com.github.venwyhk</groupId>
         <artifactId>i18n-maven-plugin</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.1</version>
         <!-- <configuration> -->
             <!-- 指定字符集 -->
             <!-- <encoding>UTF-8</encoding> -->
@@ -36,9 +36,9 @@ pom.xml
             <!-- 国际化配置文件后缀 -->
             <!-- <propSuffixes>.properties</propSuffixes> -->
             <!-- 变量前标识 -->
-            <!-- <firstSign>${</firstSign> -->
+            <!-- <firstSign>@{</firstSign> -->
             <!-- 变量后标识 -->
-            <!-- <finalSign>}</finalSign> -->
+            <!-- <finalSign>}@</finalSign> -->
         <!-- </configuration> -->
         <executions>
             <execution>
