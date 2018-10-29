@@ -39,7 +39,7 @@
         <dependency>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-plugin-plugin</artifactId>
-            <version>3.5.4</version>
+            <version>3.5.2</version>
         </dependency>
     </dependencies>
     <reporting>
@@ -47,7 +47,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-plugin-plugin</artifactId>
-                <version>3.5.4</version>
+                <version>3.5.2</version>
             </plugin>
         </plugins>
     </reporting>
